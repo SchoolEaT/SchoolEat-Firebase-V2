@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-title>Perfil Produto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <div class="card" *ngIf="produtos">
+  <div class="conteudo">
+    
+    <div class="titulo">
+    <h1>Produto {{produtos.nomeProduto}}</h1>
+    </div>
+    <ion-item>
+      <ion-avatar class="photo-perfil">
+        <img [src]="produtos.fotosProdutos">
+      </ion-avatar>
+    </ion-item>
+    <div class="dados">
+    <div class="dado">
+       <p>Nome do Produto:{{produtos.nomeProduto}}</p>
+    </div>
+    <div class="dado">
+      <p>Descrição do Produto: {{produtos.descricaoProduto}}</p>
+    </div>
+    <div class="dado">
+      <p>Tipo do Produto: {{produtos.tipoProduto}}</p>
+    </div>
+    <div class="dado">
+      <p>Valor do Produto: {{produtos.valorProduto}}</p>
+    </div>
+        <div class="voltar">
+          <ion-button size="small" color="warning" routerLink="/tabs/pesquisa">voltar para o início</ion-button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </ion-content>
+  
